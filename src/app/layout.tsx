@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SkyGuy - Portfolio",
-  description: "Portfolio website",
+  title: "SkyGuy - AVS Developer",
+  description: "Backend and blockchain developer working on EigenCloud AVS and smart contracts. Building TriggerX for all EVM chains.",
 };
 
 export default function RootLayout({

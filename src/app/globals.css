@@ -97,6 +97,10 @@
     font-family: 'Space Grotesk', sans-serif;
   }
 
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
   code, pre, .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
