@@ -59,16 +59,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-8 font-mono text-xs text-muted-foreground"
-        >
-          <span className="text-primary">prev_hash:</span> 0x7f3a9b2c...
-          <span className="mx-4">|</span>
-          <span className="text-primary">nonce:</span> 42
-        </motion.div>
       </div>
     </section>
   );

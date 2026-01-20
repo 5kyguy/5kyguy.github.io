@@ -78,16 +78,6 @@ const ExperienceSection = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 font-mono text-xs text-muted-foreground"
-        >
-          <span className="text-primary">block_time:</span> 12s
-          <span className="mx-4">|</span>
-          <span className="text-primary">transactions:</span> {experiences.length}
-        </motion.div>
       </div>
     </section>
   );

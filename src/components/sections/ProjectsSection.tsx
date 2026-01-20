@@ -113,16 +113,6 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 font-mono text-xs text-muted-foreground"
-        >
-          <span className="text-primary">state_root:</span> 0x4a5b6c...
-          <span className="mx-4">|</span>
-          <span className="text-primary">contracts_deployed:</span> 12
-        </motion.div>
       </div>
     </section>
   );

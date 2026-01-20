@@ -7,7 +7,7 @@ import { Github, Twitter, Linkedin, Mail, Send } from 'lucide-react';
 const socials = [
   { icon: Github, label: 'GitHub', href: 'https://github.com/5kyguy' },
   { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/0x5kyguy' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/aakashyadav' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/aakash-yadav-61b924247' },
   { icon: Mail, label: 'Email', href: 'mailto:0x5kyguy@gmail.com' },
 ];
 
@@ -107,7 +107,7 @@ const ContactSection = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="font-display text-xl font-bold mb-4">Connect Nodes</h3>
+              <h3 className="font-display text-xl font-bold mb-4">Social Links</h3>
               <div className="flex gap-4">
                 {socials.map((social) => (
                   <a
@@ -124,17 +124,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="p-6 bg-card border border-border rounded-lg">
-              <div className="font-mono text-xs text-muted-foreground mb-2">wallet_address</div>
-              <div className="font-mono text-sm text-foreground break-all">
-                0x742d35Cc6634C0532925a3b844Bc454e4438f44e
-              </div>
-            </div>
-
-            <div className="p-6 bg-card border border-border rounded-lg">
-              <div className="font-mono text-xs text-muted-foreground mb-2">ens_domain</div>
-              <div className="text-primary font-display font-semibold">0x5kyguy.eth</div>
-            </div>
           </motion.div>
         </div>
 
@@ -145,10 +134,6 @@ const ContactSection = () => {
           className="mt-16 pt-8 border-t border-border text-center"
         >
           <p className="font-mono text-xs text-muted-foreground">
-            <span className="text-primary">chain:</span> Ethereum Mainnet
-            <span className="mx-4">|</span>
-            <span className="text-primary">block_finalized:</span> true
-            <span className="mx-4">|</span>
             © {new Date().getFullYear()} SkyGuy
           </p>
         </motion.div>
