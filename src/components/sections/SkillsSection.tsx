@@ -90,16 +90,6 @@ const SkillsSection = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="mt-12 font-mono text-xs text-muted-foreground"
-        >
-          <span className="text-primary">gas_used:</span> 21000
-          <span className="mx-4">|</span>
-          <span className="text-primary">difficulty:</span> 0x1
-        </motion.div>
       </div>
     </section>
   );

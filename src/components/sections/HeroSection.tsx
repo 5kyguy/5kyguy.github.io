@@ -22,7 +22,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="genesis" className="min-h-screen flex items-center justify-center relative px-6">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative px-6">
       <div className="max-w-4xl mx-auto text-center z-10">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -53,26 +53,16 @@ const HeroSection = () => {
             href="#about"
             className="px-6 py-3 bg-primary text-primary-foreground font-display font-semibold rounded-lg hover:glow transition-all duration-300"
           >
-            Explore Chain →
+            Learn More
           </a>
           <a
             href="#contact"
             className="px-6 py-3 border border-primary/50 text-primary font-display font-semibold rounded-lg hover:bg-primary/10 transition-all duration-300"
           >
-            Connect Node
+            Get in Touch
           </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="mt-12 font-mono text-xs text-muted-foreground"
-        >
-          <span className="text-primary">hash:</span> 0x7f3a9b2c...
-          <span className="mx-4">|</span>
-          <span className="text-primary">timestamp:</span> {new Date().toISOString().slice(0, 10)}
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
