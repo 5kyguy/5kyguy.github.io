@@ -11,6 +11,7 @@ import ContactSection from "@/components/sections/ContactSection";
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
       <ParticleNetwork />
       <SectionNav />
       
@@ -23,6 +24,7 @@ export default function Home() {
         <FeaturedSection />
         <ContactSection />
       </main>
+    </div>
     </div>
   );
 }
