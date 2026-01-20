@@ -4,39 +4,33 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-const posts = [
+const highlights = [
   {
-    title: 'Building EigenCloud AVS: A Deep Dive into TriggerX',
-    excerpt: 'Exploring the architecture and implementation of an Actively Validated Service on EigenCloud, built for all EVM chains.',
-    date: '2024-09-15',
-    readTime: '10 min',
-    tags: ['EigenCloud', 'AVS', 'EVM'],
+    title: 'EigenCloud Developers on Times Square',
+    excerpt: 'My name was featured on Times Square in New York City.',
+    date: '2025-04-XX',
     link: '#',
   },
   {
-    title: 'Smart Contract Development with Foundry',
-    excerpt: 'Best practices for building gas-efficient and secure smart contracts using Foundry framework.',
-    date: '2024-06-20',
-    readTime: '12 min',
-    tags: ['Foundry', 'Solidity', 'Security'],
+    title: 'Invited to Arbitrum Hacker House, Bengaluru',
+    excerpt: 'I was invited to the Arbitrum Hacker House in Bengaluru to hack on the Arbitrum network.',
+    date: '2025-09-18 - 2025-09-20',
     link: '#',
   },
   {
-    title: 'Keeper Networks on EigenCloud',
-    excerpt: 'Lessons learned from building a keeper network AVS during EigenCloud Microhacks.',
-    date: '2024-05-10',
-    readTime: '8 min',
-    tags: ['EigenCloud', 'Keeper', 'Microhacks'],
+    title: 'Attended ETHGlobal New Delhi',
+    excerpt: 'I attended the Pragma New Delhi conference and ETHGlobal New Delhi Hackathon.',
+    date: '2024-09-23 - 2024-09-26',
     link: '#',
   },
 ];
 
-const WritingSection = () => {
+const FeaturedSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="writing" className="min-h-screen flex items-center py-20 px-6">
+    <section id="featured" className="min-h-screen flex items-center py-20 px-6">
       <div ref={ref} className="max-w-4xl mx-auto w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -44,14 +38,14 @@ const WritingSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-display text-4xl md:text-5xl font-bold mb-12"
         >
-          Blog & <span className="text-gradient">Articles</span>
+          Featured <span className="text-gradient">Highlights</span>
         </motion.h2>
 
         <div className="space-y-6">
-          {posts.map((post, index) => (
+          {highlights.map((highlight, index) => (
             <motion.a
-              key={post.title}
-              href={post.link}
+              key={highlight.title}
+              href={highlight.link}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, x: -30 }}
@@ -62,27 +56,15 @@ const WritingSection = () => {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs text-muted-foreground">{post.date}</span>
+                    <span className="font-mono text-xs text-muted-foreground">{highlight.date}</span>
                     <span className="text-muted-foreground">•</span>
-                    <span className="font-mono text-xs text-muted-foreground">{post.readTime}</span>
                   </div>
 
                   <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {post.title}
+                    {highlight.title}
                   </h3>
 
-                  <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-mono text-xs px-2 py-1 bg-secondary text-secondary-foreground rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-muted-foreground mb-4">{highlight.excerpt}</p>
                 </div>
 
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
@@ -99,11 +81,11 @@ const WritingSection = () => {
         >
           <span className="text-primary">logs_bloom:</span> 0x00...
           <span className="mx-4">|</span>
-          <span className="text-primary">posts:</span> {posts.length}
+          <span className="text-primary">highlights:</span> {highlights.length}
         </motion.div>
       </div>
     </section>
   );
 };
 
-export default WritingSection;
+export default FeaturedSection;
